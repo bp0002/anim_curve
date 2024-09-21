@@ -1,11 +1,11 @@
 [package]
 name = "anim_curve"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["bp0002 <bp950722@outlook.com>"]
 edition = "2021"
 description = "Curve Calculation function library with simple dependencies."
 repository = "https://github.com/bp0002/anim_curve.git"
-license = "Apache-2.0"
+license = "MIT OR Apache-2.0"
 keywords = ["animation", "curves"]
 readme = "README.md"
 

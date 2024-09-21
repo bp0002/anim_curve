@@ -1,18 +1,21 @@
 #![feature(core_intrinsics)]
 
-use curve::frame::KeyFrameCurveValue;
-use easing::{EEasingMode, function::*};
-use steps::EStepMode;
-
 extern crate simba;
 
-pub mod hermite;
-pub mod bezier;
-pub mod easing;
-pub mod curve;
-pub mod steps;
-pub mod amount;
+mod hermite;
+mod bezier;
+mod easing;
+mod curve;
+mod steps;
+mod amount;
 mod types;
+
+pub use hermite::*;
+pub use bezier::*;
+pub use easing::*;
+pub use curve::*;
+pub use steps::*;
+pub use amount::*;
 
 /// 进度计算参数
 /// 对于 Step 模式 第一个参数为 步进数目

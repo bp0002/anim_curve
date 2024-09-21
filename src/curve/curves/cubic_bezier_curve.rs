@@ -1,4 +1,4 @@
-use crate::{curve::{frame_curve::FrameCurve, frame::{FrameDataValue, KeyFrameCurveValue}}, bezier, amount::AnimationAmountCalc};
+use crate::{curve::{frame_curve::FrameCurve, frame::{FrameDataValue, KeyFrameCurveValue}}, bezier::cubic_bezier, amount::AnimationAmountCalc};
 
 
 pub fn interplate_cubebezier<T: FrameDataValue>(curve: &FrameCurve<T>, target_frame: KeyFrameCurveValue, _amountcalc: &AnimationAmountCalc) -> T {
@@ -8,7 +8,7 @@ pub fn interplate_cubebezier<T: FrameDataValue>(curve: &FrameCurve<T>, target_fr
         1.,
     );
 
-    let amount = bezier::cubic_bezier(
+    let amount = cubic_bezier(
         curve.cubic_bezier_args[0],
         curve.cubic_bezier_args[1],
         curve.cubic_bezier_args[2],

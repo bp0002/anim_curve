@@ -4,7 +4,7 @@ extern crate test;
 #[cfg(test)]
 mod test_frame {
 
-    use anim_curve::{curve::{frame::KeyFrameCurveValue, frame_curve::FrameCurve, FrameIndex}, easing::EEasingMode, amount::AnimationAmountCalc, steps::EStepMode};
+    use anim_curve::*;
     use test::Bencher;
     
     #[test]

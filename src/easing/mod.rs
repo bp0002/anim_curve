@@ -47,4 +47,5 @@ pub enum EEasingMode {
     BounceInOut     = 0x33,
 }
 
-pub mod function;
+mod function;
+pub use function::*;

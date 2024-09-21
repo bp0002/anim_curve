@@ -1,5 +1,5 @@
 
-use crate::{EAmountMode, AmountParam, steps::EStepMode, curve::{frame::KeyFrameCurveValue, FrameIndex}, easing::EEasingMode};
+use crate::{EAmountMode, AmountParam, steps::EStepMode, curve::{KeyFrameCurveValue, FrameIndex}, easing::EEasingMode};
 
 /// 动画进度计算器
 pub struct AnimationAmountCalc {

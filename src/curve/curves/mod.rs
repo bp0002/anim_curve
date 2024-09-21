@@ -1,16 +1,22 @@
 use std::{fmt::Debug, intrinsics::size_of};
 
-use crate::{easing::{EEasingMode, function::get_easing_call}, amount::AnimationAmountCalc};
+use crate::{easing::{EEasingMode, get_easing_call}, amount::AnimationAmountCalc};
 
 use self::{easing_curve::interplate_easing, frames::interplate_frame_values, minmax_curve::interplate_minmaxcurve, cubic_splice::interplate_cubic_splice, cubic_bezier_curve::interplate_cubebezier};
 
 use super::{frame::{FrameDataValue, KeyFrameCurveValue, CurveFrameValue}, FrameIndex, FramePerSecond};
 
-pub mod frames;
-pub mod cubic_bezier_curve;
-pub mod cubic_splice;
-pub mod minmax_curve;
-pub mod easing_curve;
+mod frames;
+mod cubic_bezier_curve;
+mod cubic_splice;
+mod minmax_curve;
+mod easing_curve;
+
+pub use frames::*;
+pub use cubic_bezier_curve::*;
+pub use cubic_splice::*;
+pub use minmax_curve::*;
+pub use easing_curve::*;
 
 #[derive(Debug)]
 pub enum EFrameCurveType {

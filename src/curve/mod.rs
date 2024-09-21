@@ -10,6 +10,10 @@ pub enum ErrorCurve {
     KeyFrameDataTypeCannotAllocMore,
 }
 
-pub mod frame;
-pub mod frame_curve;
-pub mod curves;
+mod frame;
+mod frame_curve;
+mod curves;
+
+pub use frame::*;
+pub use frame_curve::*;
+pub use curves::*;
