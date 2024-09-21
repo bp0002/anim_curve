@@ -1,8 +1,6 @@
 use anim_curve;
-#[cfg(feature = "simba_0_8")]
-extern crate simba_0_8;
-#[cfg(feature = "simba_0_9")]
-extern crate simba_0_9;
+
+extern crate simba;
 
 #[test]
 fn test() {

@@ -5,10 +5,7 @@ use std::f32::consts::PI;
 #[cfg(feature = "amount_f64")]
 use std::f64::consts::PI;
 
-#[cfg(feature = "simba_0_8")]
-use simba_0_8::scalar::ComplexField;
-#[cfg(feature = "simba_0_9")]
-use simba_0_9::scalar::ComplexField;
+use simba::scalar::ComplexField;
 
 use crate::{easing::EEasingMode, types::KeyFrameCurveValue};
 

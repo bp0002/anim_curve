@@ -1,6 +1,6 @@
 [package]
 name = "anim_curve"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["bp0002 <bp950722@outlook.com>"]
 edition = "2021"
 description = "Curve Calculation function library with simple dependencies."
@@ -12,25 +12,16 @@ readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["amount_f32", "frameidx_u16", "simba_0_8"]
-amount_f32 = []
-amount_f64 = []
-frameidx_u16 = []
-frameidx_u32 = []
-simba_0_8 = []
-simba_0_9 = []
+default         = ["amount_f32", "frameidx_u16"]
+amount_f32      = []
+amount_f64      = []
+frameidx_u16    = []
+frameidx_u32    = []
 
 [dependencies]
-log         = "0.4"
-serde       = { version = "1.0", features = ["derive"], option=true }
-
-[dependencies.simba_0_8]
-version = "0.8"
-package = "simba"
-
-[dependencies.simba_0_9]
-version = "0.9"
-package = "simba"
+serde           = { version = "1.0", features = ["derive"], option=true }
+simba           = { version = "0.*" }
 
 [dev-dependencies]
-env_logger  = "0.9"
+log             = "0.4"
+env_logger      = "0.9"

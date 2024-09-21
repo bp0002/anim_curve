@@ -4,10 +4,7 @@ use curve::frame::KeyFrameCurveValue;
 use easing::{EEasingMode, function::*};
 use steps::EStepMode;
 
-#[cfg(feature = "simba_0_8")]
-extern crate simba_0_8;
-#[cfg(feature = "simba_0_9")]
-extern crate simba_0_9;
+extern crate simba;
 
 pub mod hermite;
 pub mod bezier;

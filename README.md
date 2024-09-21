@@ -17,12 +17,12 @@ Rust value animation curve
 ## Example
 
 * 创建线性缓动曲线
-```Rust
+```rust
     let curve = FrameCurve::curve_easing(0.0, 1.0, frame_count as FrameIndex, frame_count, EEasingMode::None);
 ```
 
 * 创建关键帧线性插值曲线
-```Rust
+```rust
     let mut curve = FrameCurve::curve_frame_values(60);
     FrameCurve::curve_frame_values_frame(&mut curve, 0, 0.0);
     FrameCurve::curve_frame_values_frame(&mut curve, 15 as FrameIndex, 1.0);
@@ -35,7 +35,7 @@ Rust value animation curve
 ```
 
 * 创建MinMaxCurve曲线
-```Rust
+```rust
     let mut curve = FrameCurve::curve_minmax_curve(0.0, 1.0, 60);
     FrameCurve::curve_minmax_curve_frame(&mut curve, 0, 0.0, 2.0, 2.0);
     FrameCurve::curve_minmax_curve_frame(&mut curve, (frame_count/2) as FrameIndex, 0.5, 0.0, 0.0);
